@@ -1,0 +1,32 @@
+package oppPractice;
+
+public class insertionsertPrep {
+public static void main(String[] args) {
+	int a[] = {23,75,45,8,32,56};
+	
+	insertsort(a);
+	for(int i: a)
+		System.out.println(i+" ");
+}
+
+private static void insertsort(int[] a) {
+
+	int n = a.length;
+	
+	int j;
+	for(int i=1;i<n;i++)
+	{
+		int temp = a[i];
+		
+		for( j = i; j>0 && temp<a[j-1];j--)
+		{
+			
+			a[j] = a[j-1];
+		
+		}
+		
+		a[j] = temp;
+	}
+	
+}
+}
